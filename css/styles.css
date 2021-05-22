@@ -239,8 +239,7 @@ footer form{
     li:last-child{
         border-bottom: none;
     }
-    li:hover,
-    li:focus{
+    li:hover,li:focus{
         background-color: #70452bc2;
     }
 
