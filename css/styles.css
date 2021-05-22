@@ -20,7 +20,9 @@
 }
 
 
-/*Header*/
+
+
+
 
 li i{
     color: #ffffff;
@@ -77,12 +79,15 @@ li a:hover{
     color: #ededed;
 }
 
-.fa-bars{
+.menu-toggle{
     color: #ffffff00;
     position: absolute;
 }
 
-/*Main*/
+
+
+
+
 
 main{
     background-color: #f2f2f2;
@@ -206,17 +211,65 @@ footer form{
 }
 
 @media screen and (max-width:480px) {
+    ul li i{
+        padding-right: 10px;
+    }
     header, ul{
         display: flex;
         flex-direction: column;
     }
     ul li a, ul li i{
-        color: #000000;
+        font-size: 1.2rem;
     }
-    .fa-bars{
-        position: relative;
-        color: #ffffff;
+    
+    ul{
+        background-color: #f5b453e3;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin: 0;
+        text-align: left;
+        padding: 10px;
+        overflow: hidden;
     }
+    li{
+        border-bottom: 1px solid #d59433;
+        padding: 10px;
+    }
+    li:last-child{
+        border-bottom: none;
+    }
+    li:hover,
+    li:focus{
+        background-color: #70452bc2;
+    }
+
+    .menu-toggle{
+        padding: 1em;
+        position: absolute;
+        top: .5em;
+        right: .5em;
+    }
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after{
+        content: '';
+        display: block;
+        background-color: #FFFFFF;
+        height: 3px;
+        width: 1.75em;
+        border-radius: 3px;
+    }
+    .hamburger::before{
+        transform: translateY(-6px);
+    }
+    .hamburger::after{
+        transform: translateY(3px);
+    }
+    .site-nav-open{
+        height: auto;
+    }
+
     /* Sorry por el desastre de responsive, no logré aclarar
     al 100% el cambio y logré hacer lo que pude, 
     muchas gracias profes <3 */
