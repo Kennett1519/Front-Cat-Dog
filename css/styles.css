@@ -24,9 +24,13 @@
 
 
 
-li i{
+li{
     color: #ffffff;
     padding-right: 3px;
+}
+
+.logo-full{
+    width: 15rem;
 }
 
 header{
@@ -51,7 +55,7 @@ header .logo{
     display: inline-block;
 }
 
-li a{
+a li{
     text-decoration: none;
     color: #ffffff;
 }
@@ -70,18 +74,22 @@ ul{
     list-style: none;
 }
 
-li{
+a li{
     display: inline-block;
-    padding: 5px;
+    padding: 1%;
 }
 
-li a:hover{
+a li:hover{
     color: #ededed;
 }
 
 .menu-toggle{
     color: #ffffff00;
     position: absolute;
+}
+
+.nav-a i{
+    padding-right: .3rem;
 }
 
 
@@ -233,8 +241,11 @@ footer form{
         margin: 0;
         text-align: left;
         height: 0;
-        overflow: hidden;
         width: 100%;
+    }
+    
+    .site-nav-open{
+        clip-path: circle(200% at top right);
     }
 
     header nav{
@@ -242,19 +253,22 @@ footer form{
         bottom: 1px;
         left: 0;
         width: 100%;
+        clip-path: circle(0px at top right);
+        transition: clip-path ease-in-out 700ms;
     }
 
-    li{
+    .nav-a{
         border-bottom: 1px solid #d59433;
         padding: 20px;
         width: 100%;
+        background-color: #f5b453f8;
     }
     
-    li:last-child{
+    .nav-a:last-child{
         border-bottom: none;
     }
 
-    li:hover,li:focus{
+    .nav-a:hover,.nav-a:focus{
         background-color: #70452bc2;
     }
 
@@ -262,7 +276,17 @@ footer form{
         padding: 1rem;
         position: absolute;
         top: 1rem;
-        right: 1rem;
+        right: .3rem;
+    }
+
+    .menu-open .hamburger{
+        transform: rotate(45deg);
+    }
+    .menu-open .hamburger::before{
+        opacity: 0;
+    }
+    .menu-open .hamburger::after{
+        transform: translateY(-3px) rotate(-90deg);
     }
 
     .hamburger,
@@ -274,6 +298,7 @@ footer form{
         height: 4px;
         width: 1.75em;
         border-radius: 3px;
+        transition: all ease-in-out 500ms;
     }
 
     .hamburger::before{
@@ -284,7 +309,5 @@ footer form{
         transform: translateY(3px);
     }
 
-    .site-nav-open{
-        height: auto;
-    }
+    
 }

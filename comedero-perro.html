@@ -11,26 +11,31 @@
     <link rel="stylesheet" href="css/comedero-perro.css">
 </head>
 <body>
+    <div class="pre-header">Kennett Ramirez Delgado</div>
     <header>
-        <a href="index.html">
+        <a href="index.html" class="logo-full">
             <div class="logo">
                 <img src="img/Cat.png" alt="Cat">
                 <h2 class="logo-1">Front</h2>
                 <h2 class="logo-2">Cat&Dog</h2>
                 <img src="img/Dog.png" alt="Dog">
             </div>
-            <nav>
-                <i class="fas fa-bars"></i>
-                <ul>
-                    <li><i class="fas fa-paw"></i><a href="categorias.html">Categorías</a></li>
-                    <li><i class="fas fa-paw"></i><a href="pets.html">Pets</a></li>
-                    <li><i class="fas fa-paw"></i><a href="nosotros.html">Sobre Nosotros</a></li>
-                    <li><i class="fas fa-paw"></i><a href="contacto.html">Contáctanos</a></li>
+        </a>
+            <nav id="site-nav" class="">
+                <ul id="site-nav" class="site-nav">
+                    <a href="categorias.html" class="nav-a"><li><i class="fas fa-paw"></i>Categorías</li></a>
+                    <a href="pets.html" class="nav-a"><li><i class="fas fa-paw"></i>Pets</li></a>
+                    <a href="nosotros.html" class="nav-a"><li><i class="fas fa-paw"></i>Sobre Nosotros</li></a>
+                    <a href="contacto.html" class="nav-a"><li><i class="fas fa-paw"></i>Contáctanos</li></a>
                 </ul>
             </nav>
-        </a>
-
+            <div id="menu-toggle" class="menu-toggle" onclick="cambiarClase()">
+                <div class="hamburger"></div>
+            </div>
     </header>
     
+
+
+    <script src="js/app.js"></script>
 </body>
 </html>
